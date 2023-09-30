@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript1</title>
+    <script>
+        function reverse(){
+        var input=Number(document.myform.num.value);
+        var sum=0;
+        while(input>0){
+            sum=sum*10+input%10;
+            input=Math.floor(input/10);
+        }
+        document.getElementById("result").innerHTML=sum;
+    }
+    </script>
+</head>
+<body>
+    <form name="myform">
+        Enter a number:<input type="text" name="num"><br>
+        <input type="button" onclick="reverse()" value="click">
+    </form>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Javascript4</title>
+
+</head>
+<body>
+    <script>
+    function date(){
+        var d,date,month,year;
+        d=new Date();
+        date=d.getDate();
+        month=d.getMonth();
+        year=d.getFullYear();
+        const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        document.getElementById("result1").innerHTML=date+"/"+months[month]+"/"+year;
+    }
+    function Time(){
+        var d,date,month,year;
+        d=new Date();
+        document.getElementById("result2").innerHTML=d;
+    }
+</script>
+    <form name="myform">
+        <input type="button" value="show date" onclick="date()">
+        <p id="result1"></p><br>
+        <input type="button" value="show Time" onclick="Time()">
+        <p id="result2"></p><br>
+
+    </form>
+      
+</body>
+</html>

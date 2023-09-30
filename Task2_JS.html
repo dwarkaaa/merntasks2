@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript2</title>
+   
+</head>
+<body>
+    <script>
+        function reverse(){
+        var input1=document.myform.string.value;
+        var input=input1.toLowerCase();
+        var re="";
+        var arr1=new Array();
+        for(var i=0;i<input.length;++i){
+            arr1[i]=input.charAt(i);
+        }
+        arr1.sort();
+        for(var j=0;j<arr1.length;++j){
+            re=re+arr1[j];
+        }
+       document.getElementById("result").innerHTML=re;
+    }
+    </script>
+    <form name="myform">
+        Enter a string:<input type="text" name="string"><br>
+        <input type="button" onclick="reverse()" value="click">
+    </form>
+    <p id="result"></p>
+</body>
+</html>
